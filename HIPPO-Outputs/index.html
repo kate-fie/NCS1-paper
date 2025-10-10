@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>🦛 FREQ Follow-Ups for CAR</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <style>
+            h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}body {font-family: "Open Sans"}
+        </style>
+    </head>
+
+    <body class="w3-content w3-padding" style="max-width:none">
+        
+        <h1 class="w3-center">🦛 FREQ Follow-Ups for CAR</h1>
+
+        <h2>General Procedure</h2>
+
+        <div class="w3-row-padding">
+            <div class="w3-col s12 m6 l6">
+                <div class="w3-panel w3-card w3-blue">
+                    <h3>Kate's 'Synthesis-Directed Elaborations'
+                    </h3>
+
+                    <ol>
+                        <li>Two fragment screen hits are merged with Fragmenstein</li>
+                        <li>The closest catalog compound is used as a base for enumeration. Six target compounds identified:</li>
+                        <ul>
+                            <li>D2R-5</li>
+                            <li>D2R-12</li>
+                            <li>Ric8inhib-1</li>
+                            <li>Ric8inhib-3</li>
+                            <li>Ric8enhan-3</li>
+                            <li>CB1R-5</li>
+                        </ul>
+                        <li>The base compound is split into two building blocks</li>
+                        <li>The building blocks are elaborated to create many different reaction products</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l6">
+                <div class="w3-panel w3-card w3-blue">
+                    <h3>Max's 'Hit Interaction Profiling for Procurement Optimisation'</h3>
+                    <ol>
+                        <li>A 'HIPPO' object is prepared with the fragment screen hits, follow-up compounds with their reaction paths and purchasing metadata</li>
+                        <li>The protein-ligand interactions are fingerprinted</li>
+                        <li>Many random collections of products and their associated building blocks are generated</li>
+                        <li>These building block sets are scored and ranked</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l6">
+                <div class="w3-panel w3-card w3-blue">
+                    <h3> Random BBS Constraints </h3>
+
+                    <ul>
+                        <li>$8000 total budget</li>
+                        <li>Lead time at most 35 work days</li>
+                        <li>Building blocks at most $100/mg</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l6">
+                <div class="w3-panel w3-card w3-blue">
+                    <h3> Scoring Metrics </h3>
+
+                    <ul>
+                        <li>The total number of products</li>
+                        <li>Hit features coverage</li>
+                        <li>New protein features (half weight)</li>
+                        <li>Average Fragmenstein ddG (quarter weight)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <h2>Comparing all Building Block Sets</h2>
+
+        All random BBSs generated are compared below:
+
+        <div> 
+            <iframe src="iter1b_go/scoring_newfeat_coverage.html" width="100%" height="500" style="border:none;"></iframe>
+        </div>
+        
+        <h2>Proposed Building Block Sets</h2>
+
+        <table class="w3-table w3-border w3-hoverable">
+            <thead>
+                <tr>
+                    <th>BBS Name</th>
+                    <th  style="text-align:left;">Detail</th>
+                    <th  style="text-align:right;">#BBs</th>
+                    <th  style="text-align:right;">Σ BB amount</th>
+                    <th  style="text-align:right;">#products</th>
+                    <th  style="text-align:right;">Price (USD)</th>
+                    <th  style="text-align:right;">max(lead time)</th>
+                    <th  style="text-align:right;">avg(lead time)</th>
+                    <th  style="text-align:right;">Hit Feature Coverage</th>
+                    <th  style="text-align:right;">#New Features</th>
+                    <th  style="text-align:left;">Downloads</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><b>BBS_002057</b></td>
+                    <td style="text-align:left;">Best Score <$8000</td>
+                    <td style="text-align:right;">280</td>
+                    <td style="text-align:right;">1180 mg</td>
+                    <td style="text-align:right;">590</td>
+                    <td style="text-align:right;">$7999.92</td>
+                    <td style="text-align:right;">34.0 work days</td>
+                    <td style="text-align:right;">23.7 work days</td>
+                    <td style="text-align:right;">38.5%</td>
+                    <td style="text-align:right;">241</td>
+                    <td style="text-align:left;">
+                        <a href="bbs/BBS_002057_bbs.csv" download>BB CSV</a>
+                        <a href="bbs/BBS_002057.sdf" download>Product SDF</a>
+                        <a href="bbs/BBS_002057.json" download>BBS JSON</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>BBS_002058</b></td>
+                    <td style="text-align:left;">Most Products <$8000</td>
+                    <td style="text-align:right;">286</td>
+                    <td style="text-align:right;">1196 mg</td>
+                    <td style="text-align:right;">598</td>
+                    <td style="text-align:right;">$7996.72</td>
+                    <td style="text-align:right;">34.0 work days</td>
+                    <td style="text-align:right;">23.1 work days</td>
+                    <td style="text-align:right;">38.7%</td>
+                    <td style="text-align:right;">184</td>
+                    <td>
+                        <a href="bbs/BBS_002058_bbs.csv" download>BB CSV</a>
+                        <a href="bbs/BBS_002058.sdf" download>Product SDF</a>
+                        <a href="bbs/BBS_002058.json" download>BBS JSON</a>
+                    </td>
+                </tr>
+
+                <!-- <tr>
+                    <td><b>BBS_001515</b></td>
+                    <td style="text-align:left;">Best Score <$5000</td>
+                    <td style="text-align:right;">171</td>
+                    <td style="text-align:right;">406 mg</td>
+                    <td style="text-align:right;">203</td>
+                    <td style="text-align:right;">$4694.83</td>
+                    <td style="text-align:right;">34.0 work days</td>
+                    <td style="text-align:right;">22.9 work days</td>
+                    <td style="text-align:right;">36.7%</td>
+                    <td style="text-align:right;">160</td>
+                    <td>
+                        <a href="bbs/BBS_001515_bbs.csv" download>BB CSV</a>
+                        <a href="bbs/BBS_001515.sdf" download>Product SDF</a>
+                        <a href="bbs/BBS_001515.json" download>BBS JSON</a>
+                    </td>
+                </tr> -->
+
+                <tr>
+                    <td><b>BBS_002138</b></td>
+                    <td style="text-align:left;">Best Score <$5000</td>
+                    <td style="text-align:right;">185</td>
+                    <td style="text-align:right;">516 mg</td>
+                    <td style="text-align:right;">258</td>
+                    <td style="text-align:right;">$4999.90</td>
+                    <td style="text-align:right;">34.0 work days</td>
+                    <td style="text-align:right;">23.7 work days</td>
+                    <td style="text-align:right;">36.2%</td>
+                    <td style="text-align:right;">191</td>
+                    <td>
+                        <a href="bbs/BBS_002138_bbs.csv" download>BB CSV</a>
+                        <a href="bbs/BBS_002138.sdf" download>Product SDF</a>
+                        <a href="bbs/BBS_002138.json" download>BBS JSON</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>BBS_002174</b></td>
+                    <td style="text-align:left;">Most Products <$5000</td>
+                    <td style="text-align:right;">193</td>
+                    <td style="text-align:right;">562 mg</td>
+                    <td style="text-align:right;">281</td>
+                    <td style="text-align:right;">$4999.91</td>
+                    <td style="text-align:right;">34.0 work days</td>
+                    <td style="text-align:right;">23.5 work days</td>
+                    <td style="text-align:right;">35.7%</td>
+                    <td style="text-align:right;">143</td>
+                    <td>
+                        <a href="bbs/BBS_002174_bbs.csv" download>BB CSV</a>
+                        <a href="bbs/BBS_002174.sdf" download>Product SDF</a>
+                        <a href="bbs/BBS_002174.json" download>BBS JSON</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h3>Coverage of interactions present in the base features</h3>
+
+        <b>Despite a strong skew towards Ric8 inhibitors:</b>
+
+        <div> 
+            <iframe src="iter1b_go/target_type.html" width="100%" height="500" style="border:none;"></iframe>
+        </div>
+
+        <b>All three BBSs cover the interaction features explored by the base compounds:</b>
+
+        <div> 
+            <iframe src="iter1b_go/coverage.html" width="100%" height="500" style="border:none;"></iframe>
+        </div>
+
+        <b>Full interaction overview:</b>
+
+        <div> 
+            <iframe src="iter1b_go/base_features.html" width="100%" height="900" style="border:none;"></iframe>
+        </div>
+
+    </body>
+</html>
